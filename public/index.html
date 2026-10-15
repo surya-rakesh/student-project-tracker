@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Project Tracker</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main>
+    <header>
+      <p class="eyebrow">Electronics workshop</p>
+      <h1>Student Project Tracker</h1>
+      <p>Keep your next engineering idea moving. Record electronics and engineering project ideas, track their status, and come back to them any time.</p>
+    </header>
+
+    <section aria-labelledby="form-title">
+      <h2 id="form-title">Add a project</h2>
+      <form id="project-form">
+        <div>
+          <label for="name">Project name</label>
+          <input id="name" name="name" required maxlength="80" autocomplete="off" placeholder="Example: IoT Monitor">
+        </div>
+        <div>
+          <label for="status">Status</label>
+          <select id="status" name="status">
+            <option>Planned</option>
+            <option>In Progress</option>
+            <option>Completed</option>
+          </select>
+        </div>
+        <div class="actions">
+          <button id="save-button" type="submit">Add project</button>
+          <button id="cancel-button" type="button" hidden>Cancel edit</button>
+        </div>
+      </form>
+    </section>
+
+    <p id="message" role="status" aria-live="polite"></p>
+
+    <section aria-labelledby="list-title">
+      <h2 id="list-title">My projects</h2>
+      <p id="empty-state" hidden>No projects yet. Add your first idea.</p>
+      <ul id="project-list" aria-label="Projects"></ul>
+    </section>
+  </main>
+</body>
+</html>

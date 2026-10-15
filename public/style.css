@@ -1,0 +1,25 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #f1f5f9; color: #172b45; font: 17px/1.5 system-ui, sans-serif; }
+main { max-width: 880px; margin: auto; padding: 32px 20px; }
+header { margin-bottom: 28px; }
+h1 { font-size: clamp(1.8rem, 5vw, 2.8rem); margin: 0 0 8px; }
+h2 { margin-top: 0; font-size: 1.3rem; }
+.eyebrow { color: #345d89; font-weight: 700; }
+section { background: white; border: 1px solid #cbd5e1; border-radius: 12px; padding: 24px; margin: 20px 0; }
+form { display: grid; gap: 16px; }
+label { display: block; font-weight: 650; margin-bottom: 6px; }
+input, select { width: 100%; padding: 11px; border: 1px solid #64748b; border-radius: 6px; font: inherit; }
+button { padding: 10px 16px; border: 1px solid #254d81; border-radius: 6px; font: inherit; cursor: pointer; background: #254d81; color: white; }
+button:disabled { opacity: .6; cursor: wait; }
+button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid #c26e00; outline-offset: 3px; }
+#cancel-button, .edit-button { background: white; color: #254d81; }
+.delete-button { background: #9b2525; border-color: #9b2525; }
+.actions { display: flex; flex-wrap: wrap; gap: 10px; }
+#project-list { list-style: none; padding: 0; }
+.project { display: flex; align-items: center; justify-content: space-between; gap: 16px; border-top: 1px solid #cbd5e1; padding: 16px 0; }
+.project-name { margin: 0; font-size: 1.1rem; overflow-wrap: anywhere; }
+.project-status { margin: 4px 0; color: #475569; }
+#message { min-height: 1.5em; }
+#message[data-error="true"] { color: #9b2525; }
+[hidden] { display: none !important; }
+@media (max-width: 560px) { main { padding: 20px 12px; } section { padding: 16px; } .project { align-items: stretch; flex-direction: column; } }
